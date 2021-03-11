@@ -1,0 +1,11 @@
+*,*:active ,*:link
+{
+    padding:0px;
+    margin:0px;
+}
+
+// fluid design implementation
+html
+{ 
+    font-size: calc(1em + 1vw); 
+}
