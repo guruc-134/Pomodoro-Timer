@@ -28,6 +28,7 @@ const msgContainer=document.getElementById('message-container')
 
 // used to ensure that the details are diaplayed only once
 var displayedSession=true;
+var displayedPlanner=true;
 const flipSession=()=>
 {
     insession=false
@@ -49,6 +50,9 @@ const flipBreak=()=>
     timer_session.style.display='block';
     timer_break.style.display='none';
     timer_break.style.transform='rotateY(180deg)';
+    if (displayedPlanner)
+    displayPlanner()
+    displayedPlanner=false;
 
     // /resetting the  displayedSession to allow the display for the next session
     displayedSession=true;
@@ -150,7 +154,7 @@ startStop.addEventListener('click' , function()
     else if(currentStartStop==undefined)
     {
         running=true;
-        currentStartStop=setInterval(startClock,1000)
+        currentStartStop=setInterval(startClock,300)
     }
     
 });

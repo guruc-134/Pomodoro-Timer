@@ -147,10 +147,9 @@ span
 {
     padding:1rem ;
 }
-.sessions_displayer
-{
-    &__list
-    {
-        
-    }
+ul [class^="session_displayer__list"]{
+    text-align: center;
+    list-style-type:none;
+    padding:1rem;
+    margin: 1rem;
 }
