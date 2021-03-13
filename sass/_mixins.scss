@@ -5,3 +5,10 @@
     font-size: 1.5em;
     }
 }
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

@@ -4,80 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
+    <title>Study Timer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@510&display=swap" rel="stylesheet">
 <link rel="icon" href="img/timerlogo.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <header class='page-header'>
         <h1 class='page-header-txt'>
-        Pomodoro Timer
+        Study Timer
         </h1>
     </header>
     <main class='page-main '>
-        <div class="settings-block">
-            <div id='break' class='block'>
-                <div id="break-settings">
-                    <h4 id='break-label'>
-                        Break Length
-                    </h4>
-                    <button id="break-increment" class='icons'>&Uarr;</button>
-                    <span id='break-length'> 5</span>
-                    <button id="break-decrement" class='icons'>&Darr;</button>  
+        <div class="row">
+<!-- pomodoro clock --------------- 2/3 parts--------------- -->
+        <div class="col-2-of-3">
+
+            <div class="settings-block">
+                <div id='break' class='block'>
+                    <div id="break-settings">
+                        <h4 id='break-label'>
+                            Break Length
+                        </h4>
+                        <button id="break-increment" class='icons'>&Uarr;</button>
+                        <span id='break-length'> 5</span>
+                        <button id="break-decrement" class='icons'>&Darr;</button>  
+                    </div>
+                </div>
+                <div id='session' class='block'>
+                    <div id="session-settings">
+                        <h4 id='session-label'>
+                            Session Length
+                        </h4>
+                        <button id="session-increment" class='icons' >&Uarr;</button>
+                        <span id='session-length'> 25</span>
+                        <button id="session-decrement" class='icons'>&Darr;</button>  
+                    </div>
                 </div>
             </div>
-            <div id='session' class='block'>
-                <div id="session-settings">
-                    <h4 id='session-label'>
-                        Session Length
-                    </h4>
-                    <button id="session-increment" class='icons' >&Uarr;</button>
-                    <span id='session-length'> 25</span>
-                    <button id="session-decrement" class='icons'>&Darr;</button>  
+            
+            <div id='timer' class='block'>
+                <div id="timer-box">
+                    <div id="timer-box-session">
+                        <h5 id='timer-label'>
+                            Session
+                        </h5>
+                        <span id='time-left'>
+                            <span id="time-left-mins">00</span>:
+                            <span id="time-left-secs">03</span>
+                        </span>
+                    </div>
+                    <div id="timer-box-break">
+                        <h5 id='break-timer-label'>
+                            break
+                        </h5>
+                        <span id='break-time-left'>
+                            <span id="break-time-left-mins">00</span>:
+                            <span id="break-time-left-secs">02</span>
+                        </span>
+                    </div>
+                </div>
+                <div id="timer-settings">
+                    <button id="start-stop" class='icons-larger'>&RightTriangleBar;</button>
+                    <button id="reset" class='icons-large'>&olarr;</button>
                 </div>
             </div>
         </div>
+            <!-- end of pomodoro---------------------------------------------- -->
+            
+<!-- display schedules -->
+        <div class="col-1-of-3">
 
-        <div id='timer' class='block'>
-            <!-- add a feature so that the user can choose to see the digital time 
-            or can choose to see a rotating circle with start and end pointer -->
-            <div id="timer-box">
-                <div id="timer-box-session">
-                    <h5 id='timer-label'>
-                        Session
-                    </h5>
-                    <span id='time-left'>
-                        <span id="time-left-mins">25</span>:
-                        <span id="time-left-secs">00</span>
-                    </span>
-                </div>
-                <div id="timer-box-break">
-                    <h5 id='break-timer-label'>
-                        break
-                    </h5>
-                    <span id='break-time-left'>
-                        <span id="break-time-left-mins">5</span>:
-                        <span id="break-time-left-secs">00</span>
-                    </span>
-                </div>
-            </div>
-            <div id="timer-settings">
-                <button id="start-stop" class='icons-larger'>&RightTriangleBar;</button>
-                <button id="reset" class='icons-large'>&olarr;</button>
-            </div>
-            <div id="message-container">
-
+            <div class="session_displayer">
+                <!-- once the session is done we can see the initial goals here and we have to put tick marks against the ones that are not done -->
+                <h3 class="session-details-heading">
+                    Session Details
+                </h3>
+                <ul class="session_displayer__list">
+                
+                </ul>
+                
             </div>
         </div>
+    </div>
+            <div id="planner">
+                    <label for="aim_bar">Enter your goal for this session</label><br>
+                    <textarea id='aim_bar' name='goals' type="text" rows='5' cols='25' placeholder="enter in the format shown below           -Study chapter                             -prepare notes for Unit y.. etc" required></textarea>
+                    <br>
+                    <button id="planner_btn">
+                        Add Goals
+                    </button>
+            </div>
+        </main>
 
-        <div></div>
-    </main>
 
-
-    <script src="js/script.js"></script>
-</body>
+        <script src="js/script.js"></script>
+        <script src="js/script2.js"></script>
+        
+    </body>
 </html>

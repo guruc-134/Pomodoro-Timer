@@ -26,7 +26,8 @@ const timer_break=document.getElementById('timer-box-break')
 const msgContainer=document.getElementById('message-container')
 // piece of code to flip between the session and break 
 
-
+// used to ensure that the details are diaplayed only once
+var displayedSession=true;
 const flipSession=()=>
 {
     insession=false
@@ -34,6 +35,12 @@ const flipSession=()=>
     timer_session.style.display='none';
     timer_break.style.display='block';
     timer_break.style.transform='rotateY(0deg)';
+
+    // for displaying the goals only once on the screen
+    if(displayedSession)
+    displaySessionDetails()
+    displayedSession=false
+
 }
 const flipBreak=()=>
 {
@@ -42,6 +49,10 @@ const flipBreak=()=>
     timer_session.style.display='block';
     timer_break.style.display='none';
     timer_break.style.transform='rotateY(180deg)';
+
+    // /resetting the  displayedSession to allow the display for the next session
+    displayedSession=true;
+    
 }
 // flipSession()
 const updateTitle= function()
