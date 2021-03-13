@@ -33,6 +33,7 @@ const flipSession=()=>
 {
     insession=false
     inbreak=  true
+    displayedPlanner=true;
     timer_session.style.display='none';
     timer_break.style.display='block';
     timer_break.style.transform='rotateY(0deg)';
@@ -47,6 +48,7 @@ const flipBreak=()=>
 {
     insession=true
     inbreak= false
+    displayedSession=true;
     timer_session.style.display='block';
     timer_break.style.display='none';
     timer_break.style.transform='rotateY(180deg)';
@@ -154,7 +156,7 @@ startStop.addEventListener('click' , function()
     else if(currentStartStop==undefined)
     {
         running=true;
-        currentStartStop=setInterval(startClock,300)
+        currentStartStop=setInterval(startClock,100)
     }
     
 });
