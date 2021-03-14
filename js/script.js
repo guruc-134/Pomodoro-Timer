@@ -155,7 +155,7 @@ startStop.addEventListener('click' , function()
     else if(currentStartStop==undefined)
     {
         running=true;
-        currentStartStop=setInterval(startClock,100)
+        currentStartStop=setInterval(startClock,1000)
     }
     
 });
