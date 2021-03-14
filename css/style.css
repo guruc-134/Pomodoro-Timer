@@ -152,7 +152,7 @@ span {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  font-size: 0.8rem; }
+  font-size: 0.6rem; }
 
 .dropdown-div {
   padding: 0px; }
@@ -186,3 +186,13 @@ span {
   background: transparent; }
   .task_completed_btn-img {
     height: 1rem; }
+
+#review-btn {
+  outline: none;
+  border: none;
+  background: transparent;
+  display: inline-block; }
+
+#review-img {
+  display: inline-block;
+  height: 2vw; }

@@ -46,7 +46,8 @@ const flipSession=()=>
             <h4 class='dropdown-div-heading'>Session ${curListLenCount}</h4>
             <ul class='ul-list-dropdown' id="session_displayer__list-${curListLenCount}"> </ul>
             </div>`
-            displaySessionDetails()
+        review_session()
+        displaySessionDetails()
         displayedSession=false
        }
 

@@ -153,7 +153,7 @@ span
     list-style-type:none;
     padding: 0;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     // border:3px solid $color-primary;
 }
 .dropdown-div
@@ -194,4 +194,15 @@ span
     outline:none;
     border:none;
     background:transparent;
+}
+#review-btn{
+    outline:none;
+    border:none;
+    background:transparent;
+    display:inline-block;
+}
+#review-img{
+    display:inline-block;
+    height:2vw;
+    
 }

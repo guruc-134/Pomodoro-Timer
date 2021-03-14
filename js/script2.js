@@ -5,7 +5,9 @@ const plannerDiv=document.querySelector('#planner')
 const aimTextArea=document.querySelector('#aim_bar')
 const dropDownDiv=document.querySelector('#session_displayer')
 var ul_lst_dropdown=document.querySelector('ul-list-dropdown')
-const taskCompletedBtn=document.querySelector('.task_completed_btn')
+const reviewBtn=document.querySelector('review-btn')
+var taskCompletedBtn;
+var curSpanEle;
 var cursessionDisplayList;
 var sessionDetails=[]
 var curListLenCount=0;
@@ -44,7 +46,7 @@ const displaySessionDetails= ()=>
             cursessionDisplayList.innerHTML+=
             `<li id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}">
 
-                <span id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}" > ${content} </span>
+                <span id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}-txt" > ${content} </span>
                 <button id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}-btn" class='task_completed_btn'>
                     <img class='task_completed_btn-img' src="https://img.icons8.com/plasticine/100/000000/task-completed.png"/>
                 </button>
@@ -60,12 +62,34 @@ const displayPlanner= ()=>
 
 }
 
-if(taskCompletedBtn)
+const review_session=()=>
 {
-    taskCompletedBtn.addEventListener('click',()=>
+    // if(reviewBtn)
+    // {
+    //     reviewBtn.addEventListener('click',()=>
+    //     {
+    console.log('hello, im here')
+    for(let ulNum=1;ulNum<curListLenCount;ulNum++)
     {
+        for(let liNum=1; liNum<curlistEleCount;liNum++)
+        {
+            taskCompletedBtn=document.getElementById(`session_displayer__list-${ulNum}_ele-${liNum}-btn`)
+            curSpanEle=document.getElementById(`session_displayer__list-${ulNum}_ele-${liNum}-txt`)
+
+            if(taskCompletedBtn)
+            {
+                taskCompletedBtn.addEventListener('click',()=>
+                {
+                    console.log('inner-me')
+                    curSpanEle.style.color='red';
+                }
+                );
+            }
+
+        }
     }
-    );
+    //     });
+    // }
 }
 
 
