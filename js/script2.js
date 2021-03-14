@@ -1,5 +1,3 @@
-// this is the script file used for adding the scheduled goals
-
 const plannerBtn= document.querySelector('#planner_btn')
 const plannerDiv=document.querySelector('#planner')
 const aimTextArea=document.querySelector('#aim_bar')
@@ -20,21 +18,12 @@ if(plannerBtn)
         curlistEleCount=0;
         sessionDetails.push(...aimTextArea.value.split('-'))
         aimTextArea.value=""
-        plannerDiv.style.visibility='hidden';
-        // curListLenCount+=1;
-        // dropDownDiv.innerHTML+=
-        // `<div class='dropdown-div'>
-        // <h4 class='dropdown-div-heading'>Session ${curListLenCount}</h4>
-        // <ul class='ul-list-dropdown' id="session_displayer__list-${curListLenCount}"> </ul>
-        // </div>`
     }
     )
 }
-// console.log(sessionDetails)
 
 const displaySessionDetails= ()=>
 {
-    // console.log(sessionDetails)
     cursessionDisplayList=document.querySelector(`#session_displayer__list-${curListLenCount}`)
     for(let ind in sessionDetails)
     {
@@ -45,9 +34,7 @@ const displaySessionDetails= ()=>
             curlistEleCount+=1
             cursessionDisplayList.innerHTML+=
             `<li id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}">
-
                 <span id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}-txt" > ${content} </span>
-                <button id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}-btn" class='task_completed_btn'>
                     <img class='task_completed_btn-img' src="https://img.icons8.com/plasticine/100/000000/task-completed.png"/>
                 </button>
             </li>`
@@ -55,44 +42,8 @@ const displaySessionDetails= ()=>
     }
     sessionDetails=[]
 }
-
 const displayPlanner= ()=>
 {
     plannerDiv.style.visibility='visible';
 
 }
-
-const review_session=()=>
-{
-    // if(reviewBtn)
-    // {
-    //     reviewBtn.addEventListener('click',()=>
-    //     {
-    console.log('hello, im here')
-    for(let ulNum=1;ulNum<curListLenCount;ulNum++)
-    {
-        for(let liNum=1; liNum<curlistEleCount;liNum++)
-        {
-            taskCompletedBtn=document.getElementById(`session_displayer__list-${ulNum}_ele-${liNum}-btn`)
-            curSpanEle=document.getElementById(`session_displayer__list-${ulNum}_ele-${liNum}-txt`)
-
-            if(taskCompletedBtn)
-            {
-                taskCompletedBtn.addEventListener('click',()=>
-                {
-                    console.log('inner-me')
-                    curSpanEle.style.color='red';
-                }
-                );
-            }
-
-        }
-    }
-    //     });
-    // }
-}
-
-
-
-// note to self
-// planning to add a feature which when we click the checkbixes from the ul those elements get deleted from the sessiondetails list and the others get carry forwarded 

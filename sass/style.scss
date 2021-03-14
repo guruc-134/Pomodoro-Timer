@@ -2,14 +2,20 @@
 @import 'variables';
 @import 'mixins';
 @import 'grid';
-// @import 'checkbox';
+@import 'dropdown';
 
 body
 {
     background:$color-background-1;
-    font-family:'Dancing Script', cursive;
+    font-family: 'Pacifico', cursive; 
     font-weight: 600;
     color:$color-secondary
+}
+.navbar
+{
+    background: $color-secondary;
+    text-align: center;
+    z-index: 10;
 }
 .page-main
 {
@@ -23,9 +29,10 @@ body
     margin: auto;
     display: inline-block;
 }
+
 span
 {
-    font-size: 1.6em;
+    font-size:3vw;
     cursor: pointer;
 }
 .icons
@@ -34,7 +41,7 @@ span
     cursor: pointer;
     outline:none;
     background:$color-background-1;
-    font-size: 1.2em;
+    font-size: 1.4em;
     width: fit-content;
     color: $color-primary;
     &-large
@@ -57,20 +64,24 @@ span
         color: $color-secondary;
     }
 }
+
 .page-header
 {
     background:$color-secondary;
+    margin-left:20%;
     text-align:center;
+  
     &-txt
     {
         text-decoration:underline;
         color:$color-primary;
+        font-size: $font-size-large;
         padding:.4em;
     }
 }
 #timer
 {
-    width:25%;
+    width:25vw;
     padding:1em;
     border: 2px solid $color-primary;
     text-align: center;
@@ -129,12 +140,15 @@ span
 #aim_bar
 {
     background: $color-background-2;
-    border:2px solid $color-primary;
+    border:4px solid $color-primary;
     border-radius: 30%;
     padding: 2rem;
+    overflow:scroll;
+    color:$color-background-1;
+    width:30vw;
     outline: none;
 }
-#aim_bar::-webkit-scrollbars
+#aim_bar::-webkit-scrollbar
 {
     display: none;
 }
@@ -146,23 +160,45 @@ span
 {
     padding:1rem ;
 }
+li [id^="session_displayer__list-"]
+{
+    font-size: 1.3vw;
+}
 .ul-list-dropdown{
     text-align: center;
     list-style-type:none;
     padding: 0;
     margin: 0;
     font-size: 0.6rem;
-    // border:3px solid $color-primary;
 }
 .dropdown-div
 {
     padding: 0px;
+
+    outline: none;
+    border: none;
     &-heading{
         font-size:1.2rem;
         background: $color-primary;
         padding:0px;
+        margin: 0;
+        outline: none;
+        border: none;
+    }
+    li{
+    color:$color-background-1;
+    border-bottom: 0.8px dotted  $color-primary;
+    padding:0px;
+    margin: 0;
+    outline: none;
+    border: none;
+    }
+    img 
+    {
+    text-align: right;
     }
 }
+
 .checkbox
 {
     border:1px solid $color-primary;
@@ -170,7 +206,20 @@ span
     border-radius: 3%;
     outline: none;
 }
-
+.label_heading
+{
+    padding:1rem;
+    font-size: $font-size-medium;
+    &_small
+    {
+        font-size: $font-size;
+    }
+}
+.session_planner-heading
+{
+    padding:1rem;
+    margin-top: 1rem;
+}
 #session_displayer::-webkit-scrollbar {
     display: none;
 }
@@ -181,7 +230,7 @@ span
 #session_displayer
 {
     overflow:scroll;
-    max-height:20rem;
+    max-height:16rem;
 }
 .task_completed_btn
 {

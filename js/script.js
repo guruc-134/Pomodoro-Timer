@@ -24,11 +24,12 @@ const timer_session=document.getElementById('timer-box-session')
 const timer_break=document.getElementById('timer-box-break')
 
 const msgContainer=document.getElementById('message-container')
-// piece of code to flip between the session and break 
 
-// used to ensure that the details are diaplayed only once
+// used to ensure that the details are displayed only once
 var displayedSession=true;
 var displayedPlanner=true;
+
+// piece of code to flip between the session and break 
 const flipSession=()=>
 {
     insession=false
@@ -40,16 +41,16 @@ const flipSession=()=>
 
     // for displaying the goals only once on the screen
     if(displayedSession)
-       { curListLenCount+=1;
+    { curListLenCount+=1;
         dropDownDiv.innerHTML+=
             `<div class='dropdown-div'>
-            <h4 class='dropdown-div-heading'>Session ${curListLenCount}</h4>
+            <p class='dropdown-div-heading'> Session ${curListLenCount}
+            </p>
             <ul class='ul-list-dropdown' id="session_displayer__list-${curListLenCount}"> </ul>
             </div>`
-        review_session()
         displaySessionDetails()
         displayedSession=false
-       }
+    }
 
 }
 const flipBreak=()=>
@@ -65,12 +66,7 @@ const flipBreak=()=>
     displayedPlanner=false;
     // /resetting the  displayedSession to allow the display for the next session
     displayedSession=true;
-
-    // adding the ul element 
-      
-    
 }
-// flipSession()
 const updateTitle= function()
 {
     if(inbreak)
@@ -82,7 +78,6 @@ const updateTitle= function()
         document.title= `Session : ${timeLeftmm.innerHTML}:${timeLeftss.innerHTML}`
     }
 }
-// flipBreak()
 var insession=true;
 var inbreak=false;
 var running=false;
@@ -116,7 +111,6 @@ const startClock=function()
     if(timeLeftss.innerHTML==0 && timeLeftmm.innerHTML==0)
     {
         // the timer has completed
-        // add audio
         flipSession()
         if(breakLeftss.innerHTML!=0)
         {
@@ -126,7 +120,6 @@ const startClock=function()
             breakLeftss.innerHTML='0'+breakLeftss.innerHTML   
             }
             updateTitle()
-
         }
         else if(breakLeftmm.innerHTML!=0 && breakLeftss.innerHTML==0)
         {
@@ -137,8 +130,6 @@ const startClock=function()
             breakLeftmm.innerHTML='0'+breakLeftmm.innerHTML   
             }
             updateTitle()
-
-            
         }
         if(breakLeftss.innerHTML==0 && breakLeftmm.innerHTML==0 && timeLeftss.innerHTML==0 && timeLeftmm.innerHTML==0)
         {
@@ -148,12 +139,10 @@ const startClock=function()
             timeLeftmm.innerHTML=sessionLen.innerHTML;
             timeLeftss.innerHTML='00'
             updateTitle()
-
         }
         
     }
 }
-
 // toggling start stop state 
 startStop.addEventListener('click' , function()
 {
@@ -198,6 +187,7 @@ sessionInc.addEventListener('click' ,function(){
 // decrement the session
 sessionDec.addEventListener('click' ,function(){
     let curLen=parseInt(sessionLen.innerHTML)
+    if(curLen==1) sessionLen.innerHTML=60
     if(curLen>1) sessionLen.innerHTML=curLen-1;
     timeLeftmm.innerHTML=sessionLen.innerHTML;
     
@@ -206,17 +196,17 @@ sessionDec.addEventListener('click' ,function(){
 // increment break len
 breakInc.addEventListener('click' ,function(){
     let curLen=parseInt(breakLen.innerHTML)
-    curLen=curLen%60;
+    curLen=curLen%30;
     breakLen.innerHTML=curLen+1;
+    breakLeftmm.innerHTML=breakLen.innerHTML
 })
 
 // decrement break len
 breakDec.addEventListener('click' ,function(){
     let curLen=parseInt(breakLen.innerHTML)
-    if (curLen>0)
-    {
-        breakLen.innerHTML=curLen-1;
-    }
+    if(curLen==1) breakLen.innerHTML=30
+    if(curLen>1) breakLen.innerHTML=curLen-1;
+    breakLeftmm.innerHTML=breakLen.innerHTML;
 });
 function stopInterval()
 {
