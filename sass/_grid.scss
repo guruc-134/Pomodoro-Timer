@@ -1,3 +1,11 @@
+// .col-1-of-3::-webkit-scrollbar {
+//     display: none;
+// }
+// .col-1-of-3 {
+//     -ms-overflow-style: none; /* IE and Edge */
+//     scrollbar-width: none;  /* Firefox */
+// }
+
 .row 
 {
     max-width: $grid-width;
@@ -8,12 +16,16 @@
     {
         float: left;    
     }
+
     .col-1-of-2 
     {
         width: calc((100% - #{$gutter-horizontal}) / 2);
     }
+    // currently being used
     .col-1-of-3 
     {
+        // overflow:scroll;   
+        // max-height:20rem;
         width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
     }
     .col-2-of-3

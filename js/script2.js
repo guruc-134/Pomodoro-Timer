@@ -3,7 +3,9 @@
 const plannerBtn= document.querySelector('#planner_btn')
 const plannerDiv=document.querySelector('#planner')
 const aimTextArea=document.querySelector('#aim_bar')
-const dropDownDiv=document.querySelector('.session_displayer')
+const dropDownDiv=document.querySelector('#session_displayer')
+var ul_lst_dropdown=document.querySelector('ul-list-dropdown')
+const taskCompletedBtn=document.querySelector('.task_completed_btn')
 var cursessionDisplayList;
 var sessionDetails=[]
 var curListLenCount=0;
@@ -13,14 +15,16 @@ if(plannerBtn)
 {
     plannerBtn.addEventListener("click" ,()=>
     {
-
         curlistEleCount=0;
         sessionDetails.push(...aimTextArea.value.split('-'))
         aimTextArea.value=""
         plannerDiv.style.visibility='hidden';
-        curListLenCount+=1;
-        dropDownDiv.innerHTML+=
-        `<ul class="session_displayer__list-${curListLenCount}"> </ul>`
+        // curListLenCount+=1;
+        // dropDownDiv.innerHTML+=
+        // `<div class='dropdown-div'>
+        // <h4 class='dropdown-div-heading'>Session ${curListLenCount}</h4>
+        // <ul class='ul-list-dropdown' id="session_displayer__list-${curListLenCount}"> </ul>
+        // </div>`
     }
     )
 }
@@ -29,18 +33,18 @@ if(plannerBtn)
 const displaySessionDetails= ()=>
 {
     // console.log(sessionDetails)
-    cursessionDisplayList=document.querySelector(`.session_displayer__list-${curListLenCount}`)
+    cursessionDisplayList=document.querySelector(`#session_displayer__list-${curListLenCount}`)
     for(let ind in sessionDetails)
     {
-        curlistEleCount+=1
         let content =sessionDetails[ind]
         console.log(content)
         if(content.length>=1)
         {
+            curlistEleCount+=1
             cursessionDisplayList.innerHTML+=
-            `<li class="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}">
+            `<li id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}">
                 ${content}
-            <input  class='checkbox' type="checkbox" class=''>
+            <button class='task_completed_btn'> <img class='task_completed_btn-img' src="https://img.icons8.com/plasticine/100/000000/task-completed.png"/></button>
             </li>`
         }
     }
@@ -52,6 +56,14 @@ const displayPlanner= ()=>
 
 }
 
+if(taskCompletedBtn)
+{
+    taskCompletedBtn.addEventListener('click',()=>
+    {
+
+    }
+    );
+}
 
 
 

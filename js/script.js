@@ -40,8 +40,15 @@ const flipSession=()=>
 
     // for displaying the goals only once on the screen
     if(displayedSession)
-    displaySessionDetails()
-    displayedSession=false
+       { curListLenCount+=1;
+        dropDownDiv.innerHTML+=
+            `<div class='dropdown-div'>
+            <h4 class='dropdown-div-heading'>Session ${curListLenCount}</h4>
+            <ul class='ul-list-dropdown' id="session_displayer__list-${curListLenCount}"> </ul>
+            </div>`
+            displaySessionDetails()
+        displayedSession=false
+       }
 
 }
 const flipBreak=()=>
@@ -55,9 +62,11 @@ const flipBreak=()=>
     if (displayedPlanner)
     displayPlanner()
     displayedPlanner=false;
-
     // /resetting the  displayedSession to allow the display for the next session
     displayedSession=true;
+
+    // adding the ul element 
+      
     
 }
 // flipSession()
@@ -180,7 +189,7 @@ reset.addEventListener('click',function()
 // increment the session
 sessionInc.addEventListener('click' ,function(){
     let curLen=parseInt(sessionLen.innerHTML)
-    if (curLen<60)
+    curLen=curLen%60;
     sessionLen.innerHTML=curLen+1;
     timeLeftmm.innerHTML=sessionLen.innerHTML;
     
@@ -196,7 +205,7 @@ sessionDec.addEventListener('click' ,function(){
 // increment break len
 breakInc.addEventListener('click' ,function(){
     let curLen=parseInt(breakLen.innerHTML)
-    if (curLen<60)
+    curLen=curLen%60;
     breakLen.innerHTML=curLen+1;
 })
 
