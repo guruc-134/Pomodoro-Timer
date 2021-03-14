@@ -2,7 +2,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'grid';
-@import 'checkbox';
+// @import 'checkbox';
 
 body
 {
@@ -125,9 +125,7 @@ span
         margin: .8rem auto;
         outline: none;
     }
-
 }
-
 #aim_bar
 {
     background: $color-background-2;
@@ -136,8 +134,8 @@ span
     padding: 2rem;
     outline: none;
 }
-
-#aim_bar::-webkit-scrollbar {
+#aim_bar::-webkit-scrollbars
+{
     display: none;
 }
 #aim_bar {
@@ -203,6 +201,6 @@ span
 }
 #review-img{
     display:inline-block;
-    height:2vw;
+    height:1.3vw;
     
 }

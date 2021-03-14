@@ -135,7 +135,7 @@ span {
   padding: 2rem;
   outline: none; }
 
-#aim_bar::-webkit-scrollbar {
+#aim_bar::-webkit-scrollbars {
   display: none; }
 
 #aim_bar {
@@ -195,4 +195,4 @@ span {
 
 #review-img {
   display: inline-block;
-  height: 2vw; }
+  height: 1.3vw; }
