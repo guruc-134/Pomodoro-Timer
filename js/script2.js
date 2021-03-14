@@ -43,11 +43,15 @@ const displaySessionDetails= ()=>
             curlistEleCount+=1
             cursessionDisplayList.innerHTML+=
             `<li id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}">
-                ${content}
-            <button class='task_completed_btn'> <img class='task_completed_btn-img' src="https://img.icons8.com/plasticine/100/000000/task-completed.png"/></button>
+
+                <span id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}" > ${content} </span>
+                <button id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}-btn" class='task_completed_btn'>
+                    <img class='task_completed_btn-img' src="https://img.icons8.com/plasticine/100/000000/task-completed.png"/>
+                </button>
             </li>`
         }
     }
+    sessionDetails=[]
 }
 
 const displayPlanner= ()=>
@@ -60,7 +64,6 @@ if(taskCompletedBtn)
 {
     taskCompletedBtn.addEventListener('click',()=>
     {
-
     }
     );
 }
