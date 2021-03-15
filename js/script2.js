@@ -22,20 +22,21 @@ if(true)
 {
     font1.addEventListener('click', ()=>
     {
-        console.log('changed')
         body.style.fontFamily ="'Bitter', serif";
+        body.style.letterSpacing="0px";
+
     });
 
     font2.addEventListener('click', ()=>
     {
-        console.log('changed')
         body.style.fontFamily = " 'Cookie', cursive " ;
+        body.style.letterSpacing="3px";
     });
 
     font3.addEventListener('click', ()=>
     {
-        console.log('changed')
         body.style.fontFamily =" 'Lato', sans-serif " ;
+        body.style.letterSpacing="0px";
 
     });
 }

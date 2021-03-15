@@ -73,7 +73,8 @@ body {
   background: #eeeeee;
   font-family: 'Lato', sans-serif;
   font-weight: 600;
-  color: #393e46; }
+  color: #393e46;
+  letter-spacing: 0px; }
 
 .navbar {
   background: #393e46;
@@ -91,7 +92,8 @@ body {
     font-family: 'Bitter', serif;
     margin-top: 5px; }
   .customize #font-2 {
-    font-family: 'Cookie', cursive; }
+    font-family: 'Cookie', cursive;
+    font-size: .6rem; }
   .customize #font-3 {
     font-family: 'Lato', sans-serif; }
 
