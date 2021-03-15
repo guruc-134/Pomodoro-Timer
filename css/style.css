@@ -48,7 +48,7 @@ html {
   background-color: #232931;
   min-width: 160px;
   width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 4px 2px #4ecca3;
   z-index: 1; }
 
 .dropdown-content button {
@@ -79,7 +79,7 @@ body {
 .navbar {
   background: #393e46;
   text-align: center;
-  z-index: 10; }
+  cursor: default; }
 
 .customize {
   padding: .3rem;
@@ -89,11 +89,11 @@ body {
     border: 2px solid #4ecca3;
     border-radius: 15%; }
   .customize #font-1 {
-    font-family: 'Bitter', serif;
-    margin-top: 5px; }
+    font-family: 'Bitter', serif; }
   .customize #font-2 {
     font-family: 'Cookie', cursive;
-    font-size: .6rem; }
+    font-size: .6rem;
+    padding: 0.17rem; }
   .customize #font-3 {
     font-family: 'Lato', sans-serif; }
 
