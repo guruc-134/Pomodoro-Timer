@@ -26,7 +26,7 @@ html {
     width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
 
 .dropbtn {
-  background-color: #393e46;
+  background-color: #374045;
   color: white;
   padding: 1rem;
   font-size: 2vw;
@@ -45,38 +45,38 @@ html {
   overflow: hidden;
   display: none;
   position: absolute;
-  background-color: #232931;
+  background-color: #2c061f;
   min-width: 160px;
   width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1; }
 
 .dropdown-content button {
-  color: #eeeeee;
+  color: #e1d89f;
   padding: 12px 16px;
   text-decoration: none;
   width: 100%;
   display: block; }
 
 .dropdown-content button:hover {
-  background-color: #eeeeee; }
+  background-color: #e1d89f; }
 
 .dropdown:hover .dropdown-content {
   display: block; }
 
 .dropdown:hover .dropbtn {
-  color: #4ecca3;
+  color: #d89216;
   font-size: 2.2vw;
   cursor: pointer; }
 
 body {
-  background: #eeeeee;
+  background: #e1d89f;
   font-family: 'Pacifico', cursive;
   font-weight: 600;
-  color: #393e46; }
+  color: #374045; }
 
 .navbar {
-  background: #393e46;
+  background: #374045;
   text-align: center;
   z-index: 10; }
 
@@ -85,7 +85,7 @@ body {
   font-size: .5rem; }
   .customize .customize-content {
     padding: .2rem;
-    border: 2px solid #4ecca3;
+    border: 2px solid #d89216;
     border-radius: 15%; }
   .customize .cursive {
     font-family: 'Pacifico', cursive;
@@ -96,8 +96,7 @@ body {
     font-family: 'Ranchers', cursive; }
 
 .page-main {
-  text-align: center;
-  margin-top: 3em; }
+  text-align: center; }
 
 .block {
   padding: 1em;
@@ -113,38 +112,38 @@ span {
   border: none;
   cursor: pointer;
   outline: none;
-  background: #eeeeee;
+  background: #e1d89f;
   font-size: 1.4em;
   width: fit-content;
-  color: #4ecca3; }
+  color: #d89216; }
   .icons-large {
     border: none;
     outline: none;
-    background: #eeeeee;
+    background: #e1d89f;
     font-size: 1.5em;
     width: fit-content;
-    color: #393e46; }
+    color: #374045; }
   .icons-larger {
     border: none;
     outline: none;
-    background: #eeeeee;
+    background: #e1d89f;
     font-size: 1.8em;
     width: fit-content;
-    color: #393e46; }
+    color: #374045; }
 
 .page-header {
-  background: #393e46;
+  background: #374045;
   margin-left: 20%;
   text-align: center; }
   .page-header-txt {
     text-decoration: underline;
-    color: #4ecca3;
+    color: #d89216;
     font-size: 4vw; }
 
 #timer {
   width: 25vw;
   padding: 1em;
-  border: 2px solid #4ecca3;
+  border: 2px solid #d89216;
   text-align: center;
   border-radius: 3em;
   min-width: fit-content;
@@ -152,7 +151,7 @@ span {
   #timer-box {
     min-width: fit-content;
     padding: 2em;
-    border: 0.4em solid #393e46;
+    border: 0.4em solid #374045;
     border-radius: 3em;
     align-content: center;
     perspective: 180rem;
@@ -178,21 +177,22 @@ span {
   margin: 0.5rem auto;
   text-align: center; }
   #planner_btn {
-    color: #eeeeee;
-    background: #4ecca3;
-    border: 4px solid #393e46;
+    color: #e1d89f;
+    background: #d89216;
+    border: 4px solid #374045;
     padding: .3rem;
     border-radius: 25%;
     margin: .8rem auto;
     outline: none; }
 
 #aim_bar {
-  background: #232931;
-  border: 4px solid #4ecca3;
+  background: #2c061f;
+  border: 4px solid #d89216;
+  font-size: 2vw;
   border-radius: 30%;
   padding: 2rem;
   overflow: scroll;
-  color: #eeeeee;
+  color: #e1d89f;
   width: 30vw;
   outline: none; }
 
@@ -224,14 +224,14 @@ li [id^="session_displayer__list-"] {
   border: none; }
   .dropdown-div-heading {
     font-size: 1.2rem;
-    background: #4ecca3;
+    background: #d89216;
     padding: 0px;
     margin: 0;
     outline: none;
     border: none; }
   .dropdown-div li {
-    color: #eeeeee;
-    border-bottom: 0.8px dotted #4ecca3;
+    color: #e1d89f;
+    border-bottom: 0.8px dotted #d89216;
     padding: 0px;
     margin: 0;
     outline: none;
@@ -240,8 +240,8 @@ li [id^="session_displayer__list-"] {
     text-align: right; }
 
 .checkbox {
-  border: 1px solid #4ecca3;
-  background-color: #393e46;
+  border: 1px solid #d89216;
+  background-color: #374045;
   border-radius: 3%;
   outline: none; }
 

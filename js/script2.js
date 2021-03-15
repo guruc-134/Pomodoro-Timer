@@ -17,6 +17,7 @@ const fontNormal=document.querySelector('.normal')
 const fontFancy=document.querySelector('.fancy')
 const body=document.body
 
+
 if(true)
 {
     fontCursive.addEventListener('click', ()=>
@@ -38,6 +39,22 @@ if(true)
 
     });
 }
+
+
+
+// theme change
+const theme1=document.querySelector('theme-1')
+const theme1_colorPrimary="##4ecca3";
+const theme1_colorSecondary="#393e46";
+const theme1_back_1="#eeeeee";
+const theme1_back_2="#232931";
+
+const theme2=document.querySelector('theme-2')
+const theme2_colorPrimary="#e48257";
+const theme2_colorSecondary="#3a6351";
+const theme2_back_1="#f2edd7";
+const theme2_back_2="#393232";
+
 
 if(plannerBtn)
 {

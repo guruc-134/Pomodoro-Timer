@@ -21,7 +21,6 @@ body
 {
     padding:.3rem;
     font-size:.5rem;
-
     .customize-content
     {
         padding:.2rem;
@@ -47,7 +46,6 @@ body
 .page-main
 {
     text-align:center;
-    margin-top:3em;
 }
 .block
 {
@@ -166,6 +164,7 @@ span
 {
     background: $color-background-2;
     border:4px solid $color-primary;
+    font-size: $font-size;
     border-radius: 30%;
     padding: 2rem;
     overflow:scroll;
