@@ -17,6 +17,33 @@ body
     text-align: center;
     z-index: 10;
 }
+.customize 
+{
+    padding:.3rem;
+    font-size:.5rem;
+
+    .customize-content
+    {
+        padding:.2rem;
+        border:2px solid $color-primary;
+        border-radius: 15%;
+    }
+    .cursive
+    {
+        font-family:'Pacifico', cursive;
+        margin-top: 5px;
+    }
+    .normal
+    {
+        font-family: 'Akaya Telivigala', cursive;
+        
+    }
+    .fancy
+    {
+        font-family: 'Ranchers', cursive;
+    }
+}
+
 .page-main
 {
     text-align:center;
@@ -76,7 +103,6 @@ span
         text-decoration:underline;
         color:$color-primary;
         font-size: $font-size-large;
-        padding:.4em;
     }
 }
 #timer
@@ -123,8 +149,7 @@ span
 
 #planner
 {
-    font-family: 'Pacifico', cursive; 
-    margin:2rem auto;
+    margin:0.5rem auto;
     text-align: center;
     &_btn
     {
@@ -208,7 +233,7 @@ li [id^="session_displayer__list-"]
 }
 .label_heading
 {
-    padding:1rem;
+    // padding:1rem;
     font-size: $font-size-medium;
     &_small
     {
@@ -217,8 +242,7 @@ li [id^="session_displayer__list-"]
 }
 .session_planner-heading
 {
-    padding:1rem;
-    margin-top: 1rem;
+    padding:0.7rem;
 }
 #session_displayer::-webkit-scrollbar {
     display: none;

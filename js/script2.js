@@ -11,6 +11,34 @@ var sessionDetails=[]
 var curListLenCount=0;
 var curlistEleCount=0;
 
+// font changing
+const fontCursive=document.querySelector('.cursive')
+const fontNormal=document.querySelector('.normal')
+const fontFancy=document.querySelector('.fancy')
+const body=document.body
+
+if(true)
+{
+    fontCursive.addEventListener('click', ()=>
+    {
+        body.style.fontFamily = " 'Pacifico', cursive ";
+
+    });
+
+    fontNormal.addEventListener('click', ()=>
+    {
+        body.style.fontFamily = " 'Akaya Telivigala', cursive " ;
+
+
+    });
+
+    fontFancy.addEventListener('click', ()=>
+    {
+        body.style.fontFamily =" 'Ranchers', cursive " ;
+
+    });
+}
+
 if(plannerBtn)
 {
     plannerBtn.addEventListener("click" ,()=>
