@@ -12,30 +12,30 @@ var curListLenCount=0;
 var curlistEleCount=0;
 
 // font changing
-const fontCursive=document.querySelector('.cursive')
-const fontNormal=document.querySelector('.normal')
-const fontFancy=document.querySelector('.fancy')
+const font1=document.querySelector('#font-1')
+const font2=document.querySelector('#font-2')
+const font3=document.querySelector('#font-3')
 const body=document.body
 
 
 if(true)
 {
-    fontCursive.addEventListener('click', ()=>
+    font1.addEventListener('click', ()=>
     {
-        body.style.fontFamily = " 'Pacifico', cursive ";
-
+        console.log('changed')
+        body.style.fontFamily ="'Bitter', serif";
     });
 
-    fontNormal.addEventListener('click', ()=>
+    font2.addEventListener('click', ()=>
     {
-        body.style.fontFamily = " 'Akaya Telivigala', cursive " ;
-
-
+        console.log('changed')
+        body.style.fontFamily = " 'Cookie', cursive " ;
     });
 
-    fontFancy.addEventListener('click', ()=>
+    font3.addEventListener('click', ()=>
     {
-        body.style.fontFamily =" 'Ranchers', cursive " ;
+        console.log('changed')
+        body.style.fontFamily =" 'Lato', sans-serif " ;
 
     });
 }
@@ -43,19 +43,71 @@ if(true)
 
 
 // theme change
-const theme1=document.querySelector('theme-1')
-const theme1_colorPrimary="##4ecca3";
-const theme1_colorSecondary="#393e46";
-const theme1_back_1="#eeeeee";
-const theme1_back_2="#232931";
+const theme1=document.querySelector('#theme-1')
+const theme1Style=
+{
+    colorPrimary:"##4ecca3",
+    colorSecondary:"#393e46",
+    back_1:"#eeeeee",
+    back_2:"#232931",
+}
+const theme2=document.querySelector('#theme-2')
+const theme2Style=
+{
+    colorPrimary:"#e48257",
+    colorSecondary:"#3a6351",
+    back_1:"#f2edd7",
+    back_2:"#393232",
+};
 
-const theme2=document.querySelector('theme-2')
-const theme2_colorPrimary="#e48257";
-const theme2_colorSecondary="#3a6351";
-const theme2_back_1="#f2edd7";
-const theme2_back_2="#393232";
+const themechanger=(theme)=>
+{
+    // console.log('clicked theme')
+    let secondary=theme.colorSecondary;
+    let primary=theme.colorPrimary;
+    let back_1=theme.back_1;
+    let back_2=theme.back_2;
 
-const
+    // changing secondary
+    document.querySelector('body').style.color=secondary;
+    document.querySelector('.navbar').style.background=secondary;
+    document.querySelector('.icons-large').style.color=secondary;
+    document.querySelector('.icons-larger').style.color=secondary;
+    document.querySelector('.page-header').style.background=secondary;
+    document.querySelector('#timer-box').style.borderColor=secondary;
+    document.querySelector('#planner_btn').style.borderColor=secondary;
+    document.querySelector('#aim_bar').style.background=secondary;
+    document.querySelector('.dropbtn').style.backgroundColor=secondary;
+
+    // changing colorPrimary
+
+    document.querySelector('.customize-content').style.borderColor=primary;
+    document.querySelector('.icons').style.color=primary;
+    document.querySelector('.page-header-txt').style.color=primary;
+    document.querySelector('#timer').style.borderColor=primary;
+    document.querySelector('#planner_btn').style.background=primary;
+    document.querySelector('#aim_bar').style.borderColor=primary;
+    // document.querySelector('.dropdown-div-heading').style.background=primary;
+    // document.querySelector('.dropdown-div li').style.borderColor=primary;
+    // document.querySelector('checkbox').style.borderColor=primary;
+    // document.querySelector('.dropdown:hover .dropbtn').style.color=primary;
+
+    // changing back_1
+    document.querySelector('body').style.color=back_1;
+    document.querySelector('.icons').style.backgroundColor=back_1;
+    document.querySelector('.icons-large').style.backgroundColor=back_1;
+    document.querySelector('.icons-larger').style.backgroundColor=back_1;
+    document.querySelector('#planner_btn').style.color=back_1;
+    document.querySelector('#aim_bar').style.color=back_1;
+    // document.querySelector('.dropdown-div li').style.color=back_1;
+    // document.querySelector('.dropdown-content button').style.color=back_1;
+    // document.querySelector('.dropdown-content button:hover').style.color=back_1;
+};
+
+if(theme1)
+theme1.addEventListener('click',()=>themechanger(theme1Style))
+if(theme2)
+theme2.addEventListener('click',()=>themechanger(theme2Style))
 
 if(plannerBtn)
 {
@@ -65,8 +117,8 @@ if(plannerBtn)
         sessionDetails.push(...aimTextArea.value.split('-'))
         aimTextArea.value=""
     }
-    )
-}
+    );
+;}
 
 const displaySessionDetails= ()=>
 {

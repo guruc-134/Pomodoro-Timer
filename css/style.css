@@ -71,7 +71,7 @@ html {
 
 body {
   background: #eeeeee;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Lato', sans-serif;
   font-weight: 600;
   color: #393e46; }
 
@@ -87,13 +87,13 @@ body {
     padding: .2rem;
     border: 2px solid #4ecca3;
     border-radius: 15%; }
-  .customize .cursive {
-    font-family: 'Pacifico', cursive;
+  .customize #font-1 {
+    font-family: 'Bitter', serif;
     margin-top: 5px; }
-  .customize .normal {
-    font-family: 'Akaya Telivigala', cursive; }
-  .customize .fancy {
-    font-family: 'Ranchers', cursive; }
+  .customize #font-2 {
+    font-family: 'Cookie', cursive; }
+  .customize #font-3 {
+    font-family: 'Lato', sans-serif; }
 
 .page-main {
   text-align: center; }

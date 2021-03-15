@@ -11,14 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/timerlogo.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Ranchers&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&family=Cookie&family=Lato&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <nav class='navbar'>
         <header class='page-header'>
@@ -39,21 +33,21 @@
     </nav>
     <main class='page-main '>
         <div class="customize">
-            <button class="cursive customize-content">
+            <button id='font-1' class="customize-content">
                 Font 1
             </button>
-            <button class="normal customize-content">
+            <button id='font-2' class="customize-content">
                 Font 2
             </button>
-            <button class="fancy customize-content">
+            <button id="font-3" class="customize-content">
                 Font 3
             </button>
-            <button class="theme-1 customize-content">
+            <!-- <button id='theme-1' class="customize-content">
                 Theme-1
             </button>
-            <button class="theme2 customize-content">
+            <button id='theme-2' class="customize-content">
                 Theme -2
-            </button>
+            </button> -->
         </div>
         <div class="row">
             <!-- pomodoro clock --------------- 2/3 parts--------------- -->
@@ -116,9 +110,7 @@
                 </h4>
                 <div id="planner">
                     <label class='label_heading_small' for="aim_bar">Enter your goal for this session</label><br>
-                    <textarea id='aim_bar' name='goals' type="text" rows='5' cols='25'
-                        placeholder="enter in the format shown below                -Goal one        -Goal  two    -Goal Three ... etc"
-                        required></textarea>
+                    <textarea id='aim_bar' name='goals' type="text" rows='5' cols='25' placeholder="enter your goals (seperated by '-') " required></textarea>
                     <br>
                     <button id="planner_btn">
                         Add Goals

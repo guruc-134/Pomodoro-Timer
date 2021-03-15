@@ -7,7 +7,7 @@
 body
 {
     background:$color-background-1;
-    font-family: 'Pacifico', cursive; 
+    font-family: 'Lato', sans-serif; 
     font-weight: 600;
     color:$color-secondary
 }
@@ -27,19 +27,18 @@ body
         border:2px solid $color-primary;
         border-radius: 15%;
     }
-    .cursive
+    #font-1
     {
-        font-family:'Pacifico', cursive;
+        font-family:'Bitter', serif;
         margin-top: 5px;
     }
-    .normal
+    #font-2
     {
-        font-family: 'Akaya Telivigala', cursive;
-        
+        font-family:'Cookie', cursive;        
     }
-    .fancy
+    #font-3
     {
-        font-family: 'Ranchers', cursive;
+        font-family:'Lato', sans-serif;
     }
 }
 
