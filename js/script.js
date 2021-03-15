@@ -29,14 +29,6 @@ const msgContainer=document.getElementById('message-container')
 var displayedSession=true;
 var displayedPlanner=true;
 
-
-// localStorage
-var userStorage=localStorage.getItem('userstorage');
-if(! userStorage)
-userStorage=[]
-
-
-
 // piece of code to flip between the session and break 
 const flipSession=()=>
 {
@@ -158,7 +150,7 @@ startStop.addEventListener('click' , function()
     else if(currentStartStop==undefined)
     {
         running=true;
-        currentStartStop=setInterval(startClock,100)
+        currentStartStop=setInterval(startClock,1000)
     }
     
 });

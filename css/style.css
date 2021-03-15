@@ -5,6 +5,12 @@
 html {
   font-size: calc(1em + 1vw); }
 
+:root {
+  --color-background-2:#232931;
+  --color-background-1:#eeeeee;
+  --color-primary:#4ecca3;
+  --color-secondary:#393e46; }
+
 @media screen and (min-width: 75em) {
   html {
     font-size: 1.5em; } }
@@ -26,7 +32,7 @@ html {
     width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
 
 .dropbtn {
-  background-color: #393e46;
+  background-color: var(--color-secondary);
   color: white;
   padding: 1rem;
   font-size: 2vw;
@@ -45,40 +51,40 @@ html {
   overflow: hidden;
   display: none;
   position: absolute;
-  background-color: #232931;
+  background-color: var(--color-background-2);
   min-width: 160px;
   width: 100%;
   z-index: 1;
   transition: all 0.3s; }
 
 .dropdown-content button {
-  color: #eeeeee;
+  color: var(--color-background-1);
   padding: 12px 16px;
   text-decoration: none;
   width: 100%;
   display: block; }
 
 .dropdown-content button:hover {
-  background-color: #eeeeee;
-  box-shadow: 1px 4px 4px 2px #4ecca3; }
+  background-color: var(--color-background-1);
+  box-shadow: 1px 4px 4px 2px var(--color-secondary); }
 
 .dropdown:hover .dropdown-content {
   display: block; }
 
 .dropdown:hover .dropbtn {
-  color: #4ecca3;
+  color: var(--color-primary);
   font-size: 2.2vw;
   cursor: pointer; }
 
 body {
-  background: #eeeeee;
+  background: var(--color-background-1);
   font-family: 'Lato', sans-serif;
   font-weight: 600;
-  color: #393e46;
+  color: var(--color-secondary);
   letter-spacing: 0px; }
 
 .navbar {
-  background: #393e46;
+  background: var(--color-secondary);
   text-align: center;
   cursor: default; }
 
@@ -87,14 +93,12 @@ body {
   font-size: .5rem; }
   .customize .customize-content {
     padding: .2rem;
-    border: 2px solid #4ecca3;
+    border: 2px solid var(--color-primary);
     border-radius: 15%; }
   .customize #font-1 {
     font-family: 'Bitter', serif; }
   .customize #font-2 {
-    font-family: 'Cookie', cursive;
-    font-size: .6rem;
-    padding: 0.17rem; }
+    font-family: 'Courgette', cursive; }
   .customize #font-3 {
     font-family: 'Lato', sans-serif; }
 
@@ -111,42 +115,46 @@ span {
   font-size: 3vw;
   cursor: pointer; }
 
+::placeholder {
+  color: white;
+  opacity: 0.6; }
+
 .icons {
   border: none;
   cursor: pointer;
   outline: none;
-  background: #eeeeee;
+  background: var(--color-background-1);
   font-size: 1.4em;
   width: fit-content;
-  color: #4ecca3; }
+  color: var(--color-primary); }
   .icons-large {
     border: none;
     outline: none;
-    background: #eeeeee;
+    background: var(--color-background-1);
     font-size: 1.5em;
     width: fit-content;
-    color: #393e46; }
+    color: var(--color-secondary); }
   .icons-larger {
     border: none;
     outline: none;
-    background: #eeeeee;
+    background: var(--color-background-1);
     font-size: 1.8em;
     width: fit-content;
-    color: #393e46; }
+    color: var(--color-secondary); }
 
 .page-header {
-  background: #393e46;
+  background: var(--color-secondary);
   margin-left: 20%;
   text-align: center; }
   .page-header-txt {
     text-decoration: underline;
-    color: #4ecca3;
+    color: var(--color-primary);
     font-size: 4vw; }
 
 #timer {
   width: 25vw;
   padding: 1em;
-  border: 2px solid #4ecca3;
+  border: 2px solid var(--color-primary);
   text-align: center;
   border-radius: 3em;
   min-width: fit-content;
@@ -154,7 +162,7 @@ span {
   #timer-box {
     min-width: fit-content;
     padding: 2em;
-    border: 0.4em solid #393e46;
+    border: 0.4em solid var(--color-secondary);
     border-radius: 3em;
     align-content: center;
     perspective: 180rem;
@@ -164,38 +172,43 @@ span {
     text-align: center;
     background-blend-mode: screen; }
     #timer-box-session {
-      padding: .6rem;
-      top: 0px;
-      transition: all .8s ease;
-      backface-visibility: hidden; }
-    #timer-box-break {
-      display: none;
-      padding: .6rem;
+      padding: .8rem;
       top: 0px;
       transition: all .8s ease;
       backface-visibility: hidden;
-      transform: rotateY(180deg); }
+      border: 2px solid var(--color-primary);
+      border-radius: 2.4em; }
+    #timer-box-break {
+      display: none;
+      padding: .8rem;
+      top: 0px;
+      transition: all .8s ease;
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
+      border: 2px solid var(--color-primary);
+      border-radius: 2.4em; }
 
 #planner {
   margin: 0.5rem auto;
   text-align: center; }
   #planner_btn {
-    color: #eeeeee;
-    background: #4ecca3;
-    border: 4px solid #393e46;
+    font-size: 2vw;
+    color: var(--color-background-1);
+    background: var(--color-primary);
+    border: 4px solid var(--color-secondary);
     padding: .3rem;
     border-radius: 25%;
     margin: .8rem auto;
     outline: none; }
 
 #aim_bar {
-  background: #393e46;
-  border: 4px solid #4ecca3;
+  background: var(--color-secondary);
+  border: 4px solid var(--color-primary);
   font-size: 2vw;
   border-radius: 30%;
   padding: 2rem;
   overflow: scroll;
-  color: #eeeeee;
+  color: var(--color-background-1);
   width: 30vw;
   outline: none; }
 
@@ -227,14 +240,14 @@ li [id^="session_displayer__list-"] {
   border: none; }
   .dropdown-div-heading {
     font-size: 1.2rem;
-    background: #4ecca3;
+    background: var(--color-primary);
     padding: 0px;
     margin: 0;
     outline: none;
     border: none; }
   .dropdown-div li {
-    color: #eeeeee;
-    border-bottom: 0.8px dotted #4ecca3;
+    color: var(--color-background-1);
+    border-bottom: 0.8px dotted var(--color-primary);
     padding: 0px;
     margin: 0;
     outline: none; }
@@ -242,8 +255,8 @@ li [id^="session_displayer__list-"] {
     text-align: right; }
 
 .checkbox {
-  border: 1px solid #4ecca3;
-  background-color: #393e46;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-secondary);
   border-radius: 3%;
   outline: none; }
 
@@ -269,7 +282,7 @@ li [id^="session_displayer__list-"] {
   max-height: 16rem; }
 
 .session_duriation {
-  border: 1px dashed #4ecca3;
+  border: 1px dashed var(--color-primary);
   font-size: larger; }
 
 .task_completed_btn {
