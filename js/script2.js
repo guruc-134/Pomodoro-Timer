@@ -18,6 +18,8 @@ const font3=document.querySelector('#font-3')
 const body=document.body
 
 
+
+
 if(true)
 {
     font1.addEventListener('click', ()=>
@@ -135,11 +137,16 @@ const displaySessionDetails= ()=>
             `<li id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}">
                 <span id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}-txt" > ${content} </span>
                     <img class='task_completed_btn-img' src="https://img.icons8.com/plasticine/100/000000/task-completed.png"/>
-                </button>
+                
             </li>`
         }
     }
-    sessionDetails=[]
+    curlistEleCount+=1
+    cursessionDisplayList.innerHTML+=
+    `<li class='session_duriation' id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}">
+                <span id="session_displayer__list-${curListLenCount}_ele-${curlistEleCount}-txt" > Session Duriation: ${sessionLen.innerHTML} </span>  
+            </li>`
+    // sessionDetails=[]
 }
 const displayPlanner= ()=>
 {

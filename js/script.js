@@ -29,6 +29,14 @@ const msgContainer=document.getElementById('message-container')
 var displayedSession=true;
 var displayedPlanner=true;
 
+
+// localStorage
+var userStorage=localStorage.getItem('userstorage');
+if(! userStorage)
+userStorage=[]
+
+
+
 // piece of code to flip between the session and break 
 const flipSession=()=>
 {
@@ -61,11 +69,6 @@ const flipBreak=()=>
     timer_session.style.display='block';
     timer_break.style.display='none';
     timer_break.style.transform='rotateY(180deg)';
-    if (displayedPlanner)
-    displayPlanner()
-    displayedPlanner=false;
-    // /resetting the  displayedSession to allow the display for the next session
-    displayedSession=true;
 }
 const updateTitle= function()
 {
