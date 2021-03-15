@@ -7,6 +7,8 @@
 * It prevents you from resetting your break time 😅! you can't extend your break periods
 * There is a single slot allocated for both session and break timers , once the session timer hits 00:00 the break timer automatically gets started and it replaces the session timer in place
 * The time is displayed along with the name of current state of the session on the title bar of the webpage , so that the user can keep track of his time even when he is on another page
+* Plan your session by setting some goals , 
+* These goals will be dynamically added to a dropdown menu on the navigation bar
 
 The hosted site:
  https://guruc-134.github.io/Pomodoro-Timer/.
