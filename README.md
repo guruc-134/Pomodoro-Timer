@@ -9,4 +9,4 @@
 - The user can also choose the themes.
 
 The hosted site:
- https://guruc-134.github.io/Pomodoro-Timer/.
+ https://guruc-134.github.io/Study-Timer/.
