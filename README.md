@@ -1,4 +1,4 @@
-#  ⏲ Pomodoro-Timer ⏲
+#  ⏲ Study-Timer ⏲
 ## boost your productivty with this effective tool ⏲
 ### This pomodoro timer is build using HTML CSS / SASS  and JavaScript
 #### features:
